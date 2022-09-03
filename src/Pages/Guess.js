@@ -8,6 +8,7 @@ function Guess() {
           <Letter/>
           <Letter/>
           <Letter/>
+          <Letter/>
         </tr>
   );
 }

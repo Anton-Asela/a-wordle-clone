@@ -7,6 +7,11 @@ function Board(){
         <Table striped bordered hover>
             <tbody>
             <Guess/>
+            <Guess/>
+            <Guess/>
+            <Guess/>
+            <Guess/>
+            <Guess/>
             </tbody>
         </Table>
         );

@@ -1,8 +1,14 @@
 
+import Form from 'react-bootstrap/Form'
 
 function Letter() {
   return (
-    <td>L</td>
+    <td>
+      <input
+        type="text"
+        maxLength="1"
+      />
+    </td>
   );
 }
 
