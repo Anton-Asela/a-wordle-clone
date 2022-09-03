@@ -1,14 +1,10 @@
 import {Component} from "react";
 import Letter from './Letter';
 
-function Guess() {
+function Guess(props) {
   return (
         <tr>
-          <Letter/>
-          <Letter/>
-          <Letter/>
-          <Letter/>
-          <Letter/>
+          {props.guess.letters.map(element => <Letter key={element.Id} letter={element}/>)}
         </tr>
   );
 }

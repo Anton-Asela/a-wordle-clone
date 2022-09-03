@@ -4,33 +4,26 @@ import { useState } from 'react';
 
 function Board(){
 
-    const [guesses, setGuesses] = useState([{
-        Id: "1"
-    }, {
-        Id: "2"
-    }, {
-        Id:"3"
-    }, {
-        Id:"4"
-    }, {
-        Id:"5"
-    }, {
-        Id:"6"
-    }]);
+
+    let arr = [];
+    for(let i = 1 ; i <= 6 ; i++){
+        let letters = [];
+        for(let j = 1; j <= 5; j++) {
+            letters[j] = {Id: j, color: "Blank", letter: "x (" + i + "," + j  + ")"}
+        }
+        arr[i] = {Id: i, letters: letters}
+    }
+    const [guesses, setGuesses] = useState(arr);
+    
 
     return (
 
         <Table striped bordered hover>
             <tbody>
-            <div> {
-            this.state.guesses.map(function (guess) {
-               return  (<Guess key={guess.Id}></Guess>)
-            })
-            }
-        </div>
+            {guesses.map(guess => <Guess key={guess.Id} guess={guess}/>)}
             </tbody>
         </Table>
-        );
+    );
 
 }
 
