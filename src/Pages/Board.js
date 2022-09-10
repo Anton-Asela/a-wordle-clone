@@ -13,6 +13,11 @@ function Board(){
             letters[j]["loc"]= {};
             letters[j]["loc"]["x"] = j;
             letters[j]["loc"]["y"] = i;
+            letters[j]["status"] = "graybg";
+            if(j%3==0)  letters[j]["status"] = "yellobg";
+            if(j%3==1)  letters[j]["status"] = "graybg";
+            if(j%3==2)  letters[j]["status"] = "greenbg";
+
             letters[j]["ref"] = null;
         }
         arr[i] = {Id: i, letters: letters};
@@ -22,7 +27,7 @@ function Board(){
     const [board,setBoard] = useState(boardEle)
     function letterChange(e,data) {
         const newGuesses1 = guesses.slice();
-        newGuesses1[data.y].letters[data.x].letter = e.key;
+        newGuesses1[data.y].letters[data.x].letter = e.data;
         setGuesses( newGuesses1);
     }
     function keyUp1(e,data){
@@ -32,7 +37,6 @@ function Board(){
             console.log('empty current cell and back');
             if(data.x >1){
                 let idStr = data.x-1+"_"+(data.y)
-                // newGuesses[data.y].letters[data.x].letter = "";
                 boardEle.current.ownerDocument.getElementById(idStr).focus();
                 e.preventDefault();
             }
@@ -43,6 +47,7 @@ function Board(){
                 let idStr = data.x+1+"_"+(data.y)
                 boardEle.current.ownerDocument.getElementById(idStr).focus()
             }
+
         }
 
     }

@@ -12,6 +12,7 @@ function Letter(props) {
     <td>
       <input
           id={props.letter.loc.x +"_"+ props.letter.loc.y}
+          class={props.letter.status}
         onKeyUp={(e) => props.keyUp(e,props.letter.loc)}
         onChange={(e) => props.letterChange(e,props.letter.loc)}
         type="text"

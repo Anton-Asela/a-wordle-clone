@@ -28,6 +28,22 @@
   color: #61dafb;
 }
 
+
+.graybg {
+  background-color: #3a3a3c;
+}
+
+
+.yellobg {
+  background-color: #b59f3b;
+}
+
+
+.greenbg {
+  background-color: #538d4e;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
