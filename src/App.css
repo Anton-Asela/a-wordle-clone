@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+
+
+}
+
+.OneBoard {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+
 }
 
 .App-logo {
@@ -42,6 +53,35 @@
 .greenbg {
   background-color: #538d4e;
 }
+.lightgraybg {
+  background-color: #818384;
+}
+
+.grid {
+  align-self: center;
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(5, 5fr);
+  gap: .5%;
+}
+.alphagrid {
+  align-self: center;
+  width: 600px;
+  display: grid;
+  grid-template-columns: repeat(10, 3fr);
+  gap: .5%;
+}
+
+.square {
+  font-size: 2rem;
+  aspect-ratio: 1/ 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  color: #fff;
+}
+
 
 
 @keyframes App-logo-spin {
